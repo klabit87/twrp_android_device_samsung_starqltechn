@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_star2qltechn.mk
+	$(LOCAL_DIR)/omni_starqltechn.mk

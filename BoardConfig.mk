@@ -41,13 +41,14 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := SDM845
+TARGET_BOARD_PLATFORM := sdm845
+TARGET_BOOTLOADER_BOARD_NAME := starqltechn
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-#TARGET_KERNEL_CONFIG := star2qlte_chn_defconfig
+#TARGET_KERNEL_CONFIG := starqlte_chn_defconfig
 #TARGET_KERNEL_SOURCE := kernel/samsung/sdm845
-TARGET_PREBUILT_KERNEL := device/samsung/star2qltechn/boot.img-zImage
+TARGET_PREBUILT_KERNEL := device/samsung/starqltechn/boot.img-zImage
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_APPEND_DTB := true
@@ -55,7 +56,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # Image
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=20488 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=20488 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -80,18 +81,19 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := star2qltechn
+TARGET_OTA_ASSERT_DEVICE := starqltechn
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_RECOVERY_FSTAB := device/samsung/star2qltechn/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/starqltechn/recovery.fstab
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
 # Crypto
-TARGET_HW_DISK_ENCRYPTION := true
+# TARGET_CRYPTFS_HW_PATH := device/samsung/starqltechn/cryptfs_hw
+# TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
@@ -111,5 +113,6 @@ TW_EXCLUDE_SUPERSU := true
 TW_USE_NEW_MINADBD := true
 TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_USE_TOOLBOX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_MTP_DEVICE := /dev/usb_mtp_gadget
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"

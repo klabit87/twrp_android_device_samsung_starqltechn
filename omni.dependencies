@@ -3,7 +3,7 @@
         	"repository": "LineageOS/android_hardware_samsung",
         	"target_path": "hardware/samsung",
 		"remote":"github",
-		"revision":"lineage-15.1"
+		"revision":"lineage-16.0"
 	},
 	{
                 "remote":"github",
