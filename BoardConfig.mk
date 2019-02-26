@@ -97,6 +97,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
 
 # TWRP
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -112,4 +113,5 @@ TW_USE_NEW_MINADBD := true
 TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_MTP_DEVICE := /dev/usb_mtp_gadget
+TW_MTP_DEVICE := /dev/mtp_usb
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
