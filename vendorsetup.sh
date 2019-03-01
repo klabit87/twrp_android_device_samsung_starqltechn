@@ -1,1 +1,1 @@
-add_lunch_combo omni_star2qltechn-eng
+add_lunch_combo omni_starqltechn-eng

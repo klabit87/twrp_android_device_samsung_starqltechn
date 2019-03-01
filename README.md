@@ -1,5 +1,5 @@
-# Samsung Galaxy S9+ SM-G9650 device tree for twrp
-twrp_android_device_samsung_star2qlte
+# Samsung Galaxy S9+ SM-G9600 device tree for twrp
+twrp_android_device_samsung_starqlte
 
 # android 8.0
 manifest used

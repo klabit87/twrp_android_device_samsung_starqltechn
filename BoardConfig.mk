@@ -45,9 +45,9 @@ TARGET_BOOTLOADER_BOARD_NAME := SDM845
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-#TARGET_KERNEL_CONFIG := star2qlte_chn_defconfig
+#TARGET_KERNEL_CONFIG := starqlte_chn_defconfig
 #TARGET_KERNEL_SOURCE := kernel/samsung/sdm845
-TARGET_PREBUILT_KERNEL := device/samsung/star2qltechn/boot.img-zImage
+TARGET_PREBUILT_KERNEL := device/samsung/starqltechn/Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_APPEND_DTB := true
@@ -80,11 +80,11 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := star2qltechn
+TARGET_OTA_ASSERT_DEVICE := starqltechn
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_RECOVERY_FSTAB := device/samsung/star2qltechn/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/starqltechn/recovery.fstab
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
