@@ -4,3 +4,6 @@ twrp_android_device_samsung_starqlte
 # android 8.0
 manifest used
 https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni/tree/twrp-8.0
+
+Kernel source:
+https://github.com/klabit87/twrp_android_samsung_kernel_sdm845
