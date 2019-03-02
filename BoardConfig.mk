@@ -48,7 +48,7 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 #TARGET_KERNEL_CONFIG := starqlte_chn_defconfig
 #TARGET_KERNEL_SOURCE := kernel/samsung/sdm845
-TARGET_PREBUILT_KERNEL := device/samsung/starqltechn/boot.img-zImage
+TARGET_PREBUILT_KERNEL := device/samsung/starqltechn/Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_APPEND_DTB := true
