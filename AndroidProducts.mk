@@ -15,4 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_starqlte.mk
+	$(LOCAL_DIR)/twrp_starqlte.mk
+
+COMMON_LUNCH_CHOICES := twrp_starqlte-eng

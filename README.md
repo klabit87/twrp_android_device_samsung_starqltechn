@@ -5,7 +5,7 @@
 ```sh
 export ALLOW_MISSING_DEPENDENCIES=true
 . build/envsetup.sh
-lunch omni_starqlte-eng
+lunch twrp_starqlte-eng
 make recoveryimage
 ```
 
